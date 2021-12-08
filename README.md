@@ -97,27 +97,22 @@ app
 
 <br>
 
-### Server (Back End)
+### Server (Example)
+
+Pending...
 
 ### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
-
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
-<br>
-
-***
+Pending...
 
 ### Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
-
-***
+Pending...
 
 ### Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+Pending...
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+Pending...
