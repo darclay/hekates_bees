@@ -1,4 +1,5 @@
---------------------------------Overview-----------------------------------------
+# HAKETES BEES - README
+### Overview--------------------------------------------------------------------------
 This site is called Hekates Bees.  Hekates is the Greek goddess of magic.  She is the goddess of the night and the protector of the home.  She is also known as teh mother of angels.  In this case she oversees the magically workings of the hive and gives instructions to the worker bees.
 ![alt text](https://i.imgur.com/0VdnToQ.jpg) 
 
@@ -6,108 +7,117 @@ Hekates Bees is an online shop, which takes the customer through a portal and in
 
 Here customers can read about what is happening at the Hekates Bees home...
 
-------------------------------------MVP GOALS-------------------------------------
+### MVP GOALS -------------------------------------------------------------------------
 The minimal viable product for Hekates Bees is:
 
-Client (Front End)
-Wireframes
-Component Tree
-Component Architecture
-Time Estimates
-Server (Back End)
-ERD Model
-Post-MVP
-Code Showcase
-Code Issues & Resolutions
+Client: viewable Front End with the ability to see products and a mock up button for adding products to a shopping cart.
+Administrator: everything under client plus a hidden login on the frontend to give the administrator access to add, edit, and delete blog posts. The adminstrator will also have access to add, edit, and delete products.
 
-Overview
-Project Title is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper.
+- _Have fully functional CRUD backend using Ruby on Rails,_
+- _Set up user authentication on backend,_
+- _Set up a professional looking frontend site using React, and_
+- _Use CSS to style the site and to have a mobile friendly experience along with desktop._
 
+### Libraries and Dependencies
 
-MVP
-The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
+|     Library      | Description                                                            |
+| :--------------: | :----------------------------------------------------------------------|
+|      React       | _This is used for the frontend development of this site_               |
+|   React Router   | _Used for directing the user through React Components._                |
+|      Rails       | _This is the server-side app which is the framework for our database._ |
+|     PostgreSQL   | _This is the database used for all data used on this site._ |
 
-The Project Title MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper.
+### WireFrame -----------------------------------------------------------------------------
 
+Basic Layout:
+![](https://i.imgur.com/5HG0DSu.png)
 
-Goals
-Lorem ipsum, dolor sit amet,
-consectetur adipiscing elit.
-Phasellus dapibus fermentum risus vitae bibendum.
-Integer vel ipsum mollis odio sollicitudin ornare eu vel ex.
-etc.
+Basic Component Tree and State:
+![](https://i.imgur.com/ldFLCTL.png)
 
-Libraries and Dependencies
-Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
+Resource Index:
+![](https://www.figma.com)
+![](https://www.theoi.com/Cult/HekateCult.html)
+![](https://imgur.com)
 
-Library	Description
-React	Lorem ipsum dolor sit amet, consectetur.
-React Router	Lorem ipsum dolor sit amet, consectetur.
-React SemanticUI	Lorem ipsum dolor sit amet, consectetur.
-Express	Lorem ipsum dolor sit amet, consectetur.
-Express Router	Lorem ipsum dolor sit amet, consectetur.
-Client (Front End)
-Wireframes
-Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
-Dummy Link
-
-Desktop Landing
-Dummy Link
-
-Desktop Hero
-Dummy Link
-
-Resource Index
-Dummy Link
-
-Resource Show
-Dummy Link
-
-Tablet Resource Index
-Dummy Link
-
-Mobile Resource Index
-Component Tree
-Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
-Component Tree Sample
-
-Component Architecture
-Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like.
-
-
+### Component Tree: -----------------------------------------------------------------------
+``` structure
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
-|__ services/
+|
+app
+|
+|____assets/
+        |_____images
+|____main
+        |____services
+        |____components/
+                |_____layout
+                          |______nav
+                                      |______mobile_nav
+                                      |______desktop_nav
+                          |______footer
+                |_____product
+                          |______create_product
+                          |_____edit_product
+                |_____post
+                          |______create_post
+                          |_____edit_post
+                          |_____update_post
+                          |_____delete_post
+        |____screens
+                |_____home.js
+                |_____home.css
+                |_____products.js
+                |_____products.css
+                |_____one_product.js
+                |_____one_product.css
+                |_____create_product.js
+                |_____create_product.css
+                |_____blog.js
+                |_____blog.css     
+```    
 
-Time Estimates
-Use this section to estimate the time necessary to build out each of the components you've described above.
+### Time Estimates ----------------------------------------------------------------------
+<br>
+| Task                             | Estimated Time |  Actual Time  |
+| -------------------------------- | :------------: | :-----------: | 
+| Planning Idea                    |     2 hrs      |     2 hrs     |
+| Readme                           |     2 hrs      |     2 hrs     |
+| Wireframe                        |     4 hrs      |               |
+| Component Structure              |     2 hr       |               |
+| Build Rails Server               |     2 hrs      |               |
+| Build DB, Seed, & Test           |     2 hrs      |               |
+| Set up Authentication            |     2 hrs      |               |
+| Build React Component Structure  |     2 hrs      |               |
+| Build Services, Axios, & Test    |     4 hrs      |               |
+| Build React Pages                |    10 hrs      |               |
+| CSS Styling                      |    20 hrs      |               |
+| -------------------------------- | :------------: | :-----------: |
+| TOTAL                            |    52 hrs      |               |  
 
-Task	Priority	Estimated Time	Time Invested	Actual Time
-Add Contact Form	L	3 hrs	2 hrs	3 hrs
-Create CRUD Actions	H	3 hrs	1 hrs	TBD
-TOTAL		6 hrs	3 hrs	TBD
-Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe.
+<br>
 
+### Server (Back End)
 
-Server (Back End)
-ERD Model
-Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+### ERD Model
 
-ERD Sample
+> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
-Post-MVP
-Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
+<br>
 
-Code Showcase
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+***
 
-Code Issues & Resolutions
-Use this section to list of all major issues encountered and their resolution.
+### Post-MVP
+
+> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+
+***
+
+### Code Showcase
+
+> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+
+## Code Issues & Resolutions
+
+> Use this section to list of all major issues encountered and their resolution.
