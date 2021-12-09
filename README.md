@@ -25,7 +25,8 @@ Administrator: everything under client plus a hidden login on the frontend to gi
 |      React       | _This is used for the frontend development of this site_               |
 |   React Router   | _Used for directing the user through React Components._                |
 |      Rails       | _This is the server-side app which is the framework for our database._ |
-|     PostgreSQL   | _This is the database used for all data used on this site._ |
+|     PostgreSQL   | _This is the database used for all data used on this site._            |
+|  JWT and bcrypt  | _This is used for user athentication and building JSON web tokens      |
 
 ### WireFrame -----------------------------------------------------------------------------
 
@@ -80,7 +81,7 @@ app
 ### Time Estimates ----------------------------------------------------------------------
 <br>
 | Task                             | Estimated Time |  Actual Time  |
-| -------------------------------- | :------------: | :-----------: | 
+| :------------------------------: | :------------: | :-----------: | 
 | Planning Idea                    |     2 hrs      |     2 hrs     |
 | Readme                           |     2 hrs      |     2 hrs     |
 | Wireframe                        |     4 hrs      |               |
