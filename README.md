@@ -1,5 +1,5 @@
 # HAKETES BEES - README
-### Overview--------------------------------------------------------------------------
+### Overview
 This site is called Hekates Bees.  Hekates is the Greek goddess of magic.  She is the goddess of the night and the protector of the home.  She is also known as teh mother of angels.  In this case she oversees the magically workings of the hive and gives instructions to the worker bees.
 ![alt text](https://i.imgur.com/0VdnToQ.jpg) 
 
@@ -7,7 +7,7 @@ Hekates Bees is an online shop, which takes the customer through a portal and in
 
 Here customers can read about what is happening at the Hekates Bees home...
 
-### MVP GOALS -------------------------------------------------------------------------
+### MVP GOALS
 The minimal viable product for Hekates Bees is:
 
 Client: viewable Front End with the ability to see products and a mock up button for adding products to a shopping cart.
@@ -28,7 +28,7 @@ Administrator: everything under client plus a hidden login on the frontend to gi
 |     PostgreSQL   | _This is the database used for all data used on this site._            |
 |  JWT and bcrypt  | _This is used for user athentication and building JSON web tokens      |
 
-### WireFrame -----------------------------------------------------------------------------
+### WireFrame 
 
 Basic Layout:
 ![](https://i.imgur.com/5HG0DSu.png)
@@ -41,7 +41,7 @@ Resource Index:
 ![](https://www.theoi.com/Cult/HekateCult.html)
 ![](https://imgur.com)
 
-### Component Tree: -----------------------------------------------------------------------
+### Component Tree: 
 ``` structure
 src
 |
@@ -78,8 +78,8 @@ app
                 |_____blog.css     
 ```    
 
-### Time Estimates ----------------------------------------------------------------------
-<br>
+### Time Estimates 
+
 | Task                             | Estimated Time |  Actual Time  |
 | :------------------------------: | :------------: | :-----------: | 
 | Planning Idea                    |     2 hrs      |     2 hrs     |
@@ -95,8 +95,6 @@ app
 | CSS Styling                      |    20 hrs      |               |
 | -------------------------------- | :------------: | :-----------: |
 | TOTAL                            |    52 hrs      |               |  
-
-<br>
 
 ### Server (Example)
 
