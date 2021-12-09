@@ -103,7 +103,7 @@ Pending...
 
 ### ERD Model
 
-Pending...
+![]("https://i.imgur.com/Vmm9Atw.png")
 
 ### Post-MVP
 
