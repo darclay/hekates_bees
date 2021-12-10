@@ -40,6 +40,9 @@ Resource Index:
 ![](https://www.figma.com)
 ![](https://www.theoi.com/Cult/HekateCult.html)
 ![](https://imgur.com)
+![](https://www.wallpaperflare.com/bee-flying-on-top-of-white-flowers-during-sunset-e-pl5-cosmos-wallpaper-mvxmh)
+![]()
+<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
 ### Component Tree: 
 ``` structure
