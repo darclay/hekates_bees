@@ -9,7 +9,7 @@ Product.destroy_all
 Post.destroy_all
 User.destroy_all
 
-@admin = User.create!(username: 'Clare', email: 'clare@mail.com', password: 'password')
+admin = User.create!(username: 'Clare', email: 'clare@mail.com', password: 'password')
 
 puts "#{User.count} users created!"
 
@@ -17,8 +17,8 @@ Product.create!(name: 'Magic Honey Stick', description: 'this is the description
 
 puts "#{Product.count} products created!"
 
-Post.create!(title: "The Very First Title", content: "lorem epsum", id: @admin)
-Post.create!(title: "The Second Title", content: "lorem epsum", id: @admin)
-Post.create!(title: "The Third Title", content: "lorem epsum", id: @admin)
+Post.create!(title: "The Very First Title", content: "lorem epsum", user: admin)
+Post.create!(title: "The Second Title", content: "lorem epsum", user: admin)
+Post.create!(title: "The Third Title", content: "lorem epsum", user: admin)
 
 puts "#{Post.count} posts created!"

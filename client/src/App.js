@@ -7,11 +7,7 @@ import CreateProduct from './screens/create_product.jsx';
 import OneProduct from './screens/one_product.jsx';
 import Products from './screens/products.jsx';
 
-
-
 function App() {
-
-
 
   return (
     <div className="App">
@@ -20,12 +16,18 @@ function App() {
         <Route exact path="/" element={<Home />} />
   
         <Route exact path="/blog" element={<Blog />} />
-            
+{/* add component below */}
+        <Route exact path="/product-add-edit-delete" element={<AdminBlog />} />
+{/* add component below */}
         <Route exact path="/product" element={<OneProduct />} />
 
         <Route exact path="/products" element={<Products />} />
 
         <Route exact path="/product-create" element={<CreateProduct />} />
+{/* add component below */}
+        <Route exact path="/create-user" element={<CreateUser />} />  
+{/* add component below */}
+        <Route exact path="/login" element={<Login />} />
                  
       </Routes>
     </div>
@@ -33,3 +35,4 @@ function App() {
 }
 
 export default App;
+ 

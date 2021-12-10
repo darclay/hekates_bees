@@ -26,15 +26,33 @@ Administrator: everything under client plus a hidden login on the frontend to gi
 |   React Router   | _Used for directing the user through React Components._                |
 |      Rails       | _This is the server-side app which is the framework for our database._ |
 |     PostgreSQL   | _This is the database used for all data used on this site._            |
-|  JWT and bcrypt  | _This is used for user athentication and building JSON web tokens      |
+|  JWT and bcrypt  | _This is used for user athentication and building JSON web tokens_     |
 
 ### WireFrame 
 
 Basic Layout:
-![](https://i.imgur.com/5HG0DSu.png)
+Home
+![](https://i.imgur.com/U9DgP6I.png)
+Products
+![](https://i.imgur.com/FNKdweJ.png)
+Product
+![](https://i.imgur.com/pjq3zy6.png)
+Add Product
+![](https://i.imgur.com/LuHLlk3.png)
+Edit Delete Product
+![](https://i.imgur.com/x6LKdW9.png)
+Blog
+![](https://i.imgur.com/NKYpCn4.png)
+Blog Add Edit Delete
+![](https://i.imgur.com/2LrNM6V.png)
+Create User
+![](https://i.imgur.com/Q7eVqpR.png)
+Login
+![](https://i.imgur.com/ZV77bez.png)
+
 
 Basic Component Tree and State:
-![](https://i.imgur.com/ldFLCTL.png)
+![](https://i.imgur.com/i0ZzKox.png)
 
 Resource Index:
 ![](https://www.figma.com)
