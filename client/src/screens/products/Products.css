@@ -1,8 +1,5 @@
 .productsBackgroundDiv[style*="bee"] {
-  position: fixed;
   background-size: cover;
-  
-  
 }
 .productsDiv .productsBackgroundDiv .productsLeftDiv {
   width: 50%;
