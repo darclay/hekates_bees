@@ -1,1 +1,32 @@
-/*  home.css */
+.homeDiv[style*="background"] {
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+}
+.Home .flexContainer {
+  display: flex;
+}
+.Home .flexContainer .leftDiv {
+  display: flex;
+  width: 50%;
+  height: 100vh;
+}
+.Home .flexContainer .rightDiv {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  height: 100vh;
+  padding-top: 40%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+.Home .flexContainer .leftDiv {
+  font-size: 1.5em;
+  padding-top: 15%;
+  padding-left: 8%;
+}
+.Home .flexContainer .rightDiv p {
+  font-size: 1em;
+  color: white;
+  text-align: left;
+}
