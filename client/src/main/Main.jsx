@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import Home from '../screens/home/Home.jsx';
@@ -11,14 +11,28 @@ import AdminBlog from '../screens/admin_blog/AdminBlog.jsx';
 import CreateUser from '../screens/create_user/CreateUser.jsx';
 import Login from '../screens/login/Login.jsx';
 import ErrorPage from '../screens/error_page/ErrorPage.jsx';
+import { getProducts } from '../services/product.js';
 
 const Main = () => {
+  const [ products, setProducts ] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const productList = await getProducts();
+      setProducts(productList);
+    };
+    fetchProducts();
+  },[]);
+
+
   return ( 
     <div className="Main">
     <Routes>
           <Route exact path="/" element={<Home />} />
 
-          <Route exact path="/products" element={<Products />} />
+          <Route exact path="/products" element={<Products 
+              products={products}
+          />} />
 
           <Route exact path="/product" element={<OneProduct />} />
 

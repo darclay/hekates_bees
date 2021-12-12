@@ -1,1 +1,17 @@
-/* products.css */
+.productsBackgroundDiv[style*="bee"] {
+  position: fixed;
+  background-size: cover;
+  
+  
+}
+.productsDiv .productsBackgroundDiv .productsLeftDiv {
+  width: 50%;
+  height: calc(100hv - 100px);
+}
+.productsDiv .productsBackgroundDiv .productsRightDiv {
+  width: 50%;
+  height: calc(100vh - 100px);
+}
+.productsDiv .productsBackgroundDiv {
+  display: flex;
+}

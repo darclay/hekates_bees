@@ -9,13 +9,13 @@
 .Home .flexContainer .leftDiv {
   display: flex;
   width: 50%;
-  height: 100vh;
+  height: calc(100vh - 100px);
 }
 .Home .flexContainer .rightDiv {
   display: flex;
   justify-content: flex-end;
   width: 50%;
-  height: 100vh;
+  height: calc(100vh - 100px);
   padding-top: 40%;
   padding-right: 10%;
   padding-left: 10%;

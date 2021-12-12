@@ -1,11 +1,25 @@
 import './Products.css';
 import Navigation from '../../components/layout/Navigation.jsx';
+import bee from '../../assets/pictures/golden_bee.jpg';
 
-const Products = () => {
+const Products = ({products}) => {
+  
   return (  
     <div className="productsDiv">
-    <h1>Products</h1>
-    <Navigation />
+          <div className="productsBackgroundDiv" style={{ backgroundImage: `url(${bee})` }}>
+                <div className="productsLeftDiv">
+                    products.map((item) => (
+                        <div key={item.id}>
+                            <p>{product.name}</p>
+                        </div>
+                </div>
+              
+                <div className="productsRightDiv">
+                    <h1>HEKATES BEE PRODUCTS</h1>
+                </div>
+          </div>  
+          
+          <Navigation />
     </div>
   );
 }
