@@ -14,10 +14,10 @@ export const createProduct = async (formData) => {
       return response.data;
 }
 
-// export const putProduct = async (id, data) => {
-//   const resp = await api.put(`/products/${id}`, { product: data });
-//   return resp.data;
-// };
+export const putProduct = async (id, data) => {
+  const resp = await api.put(`/products/${id}`, { product: data });
+  return resp.data;
+};
 
 // export const deleteProduct = async (id) => {
 //   await api.delete(`/products/${id}`);

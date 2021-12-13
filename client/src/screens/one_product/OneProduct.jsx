@@ -1,7 +1,7 @@
 import './OneProduct.css';
 import Navigation from '../../components/layout/Navigation.jsx';
 import bee from '../../assets/pictures/golden_bee.jpg';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getProduct } from '../../services/product.js';
 import { useState, useEffect } from 'react';
 
@@ -19,18 +19,29 @@ const OneProduct = () => {
     fetchProduct();
   },[id]);
   
+  // Delete---------------------------------------------------------
+  const handleDelete = () => {
+      console.log('deleted')
+  }
+
+
   return ( 
-    <div className="productsDiv">
-          <div className="productsBackgroundDiv" style={{ backgroundImage: `url(${bee})` }}>
+    <div className="productDiv">
+          <div className="productBackgroundDiv" style={{ backgroundImage: `url(${bee})` }}>
                 
                 
                 <div className="oneProductLeftDiv">
                     {product ?  
                     <div className="productDetail">
-                        <h3>{product.id}</h3>
-                        <img src={product.img_url} alt="product picture"/>
+                        <h3>{product.name}</h3>
+                        <img src={product.img_url} alt="product"/>
                         <p className="pDescription">{product.description}</p>
                         <p className="pPrice">{product.price}</p>
+                        
+                        <div className="editAndDelete">
+                            <Link to="/edit-product"><button>edit</button></Link>
+                            <button onClick={handleDelete}>delete</button>
+                        </div>
                     </div>
                     :
                     null
@@ -47,5 +58,5 @@ const OneProduct = () => {
     </div>
    );
 }
- 
+
 export default OneProduct;

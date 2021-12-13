@@ -1,1 +1,14 @@
-/* one_product.css */
+.productBackgroundDiv[style*="bee"] {
+  background-size: cover;
+}
+.productDiv .productBackgroundDiv .oneProductLeftDiv {
+  width: 50%;
+  height: calc(100hv - 100px);
+}
+.productDiv .productBackgroundDiv .oneProductRightDiv {
+  width: 50%;
+  height: calc(100vh - 100px);
+}
+.productDiv .productBackgroundDiv {
+  display: flex;
+}

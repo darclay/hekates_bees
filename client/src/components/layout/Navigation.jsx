@@ -2,15 +2,18 @@ import './Navigation.css';
 import bee from '../../assets/icons/bee.png';
 import product from '../../assets/icons/product.png';
 import blog from '../../assets/icons/file.png';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 
 const Navigation = () => {
   const location = useLocation();
+  const {id} = useParams();
 
   const listItemStatus = () => {
     if (location.pathname === '/products'){
       return "active"
     }else if (location.pathname === '/create-product'){
+      return "active"
+    }else if (location.pathname === `/product/${id}`){
       return "active"
     }else {
       return "";

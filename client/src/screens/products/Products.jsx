@@ -12,12 +12,19 @@ const Products = ({products}) => {
                 
                 <div className="productsLeftDiv">
                   <p>left div</p>
-                    {products ?
+                    
+                    {products
+                    ?
                     products.map((product) => (
                     <div key={product.id}>
-                      <p>{product.name}</p>
-                      <p>hello</p>
-                    </div>))
+                      <Link to={`/product/${product.id}`}>
+                        <h3>{product.name}</h3>
+                        <img src={product.img_url} alt="product"/>
+                        <p>{`$${product.price}`}</p>
+                        <p>hello</p>
+                      </Link>
+                    </div>
+                    ))
                     :
                     null
                     }

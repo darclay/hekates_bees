@@ -41,7 +41,7 @@ useEffect(() => {
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     const created = await createProduct(formData);
-    setCreated({ created });
+    setCreated(created);
     setFade('fade-in');
   }
 
@@ -73,7 +73,7 @@ useEffect(() => {
           <div className="productsBackgroundDiv" style={{ backgroundImage: `url(${bee})` }}>
 
                 <div className="createProductLeftDiv">
-                      <form id="form1" onSubmit={handleSubmit}>
+                      <form id="createForm" onSubmit={handleSubmit}>
 
                           <h3>ADD A PRODUCT</h3>
                           <label>

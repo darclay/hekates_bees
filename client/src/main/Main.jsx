@@ -37,7 +37,7 @@ const Main = () => {
 
           <Route exact path="/create-product" element={<CreateProduct />} />
 
-          <Route exact path="/edit-product" element={<EditProduct />} />
+          <Route exact path="/edit-product/:id" element={<EditProduct />} />
 
         {/* -------------------------------------------------- */}
           
