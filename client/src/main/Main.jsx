@@ -14,7 +14,7 @@ import ErrorPage from '../screens/error_page/ErrorPage.jsx';
 import { getProducts } from '../services/product.js';
 
 const Main = () => {
-  const [ products, setProducts ] = useState([]);
+  const [ products, setProducts ] = useState();
 
   useEffect(() => {
     const fetchProducts = async () => {

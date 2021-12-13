@@ -1,15 +1,16 @@
 import './OneProduct.css';
 import Navigation from '../../components/layout/Navigation.jsx';
 import bee from '../../assets/pictures/golden_bee.jpg';
-import { useParams, Link } from 'react-router-dom';
-import { getProduct } from '../../services/product.js';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { getProduct, deleteProduct } from '../../services/product.js';
 import { useState, useEffect } from 'react';
 
 const OneProduct = () => {
-  
   let {id} = useParams();
-  
+  const navigate = useNavigate();
+
   const [ product, setProduct] = useState();
+  console.log(product)
   
   useEffect(() => {
     const fetchProduct = async () => {
@@ -20,8 +21,17 @@ const OneProduct = () => {
   },[id]);
   
   // Delete---------------------------------------------------------
+  const [ productDeleted, setProductDeleted] = useState(false);
+  
+
   const handleDelete = () => {
-      console.log('deleted')
+      deleteProduct(product.id)
+      setProductDeleted(!productDeleted)
+      console.log(product)
+  }
+  
+  if (productDeleted){
+    navigate("/products")
   }
 
 
@@ -39,7 +49,7 @@ const OneProduct = () => {
                         <p className="pPrice">{product.price}</p>
                         
                         <div className="editAndDelete">
-                            <Link to="/edit-product"><button>edit</button></Link>
+                            <Link to={`/edit-product/${id}`}><button>edit</button></Link>
                             <button onClick={handleDelete}>delete</button>
                         </div>
                     </div>
