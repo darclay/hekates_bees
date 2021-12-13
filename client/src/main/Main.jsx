@@ -24,7 +24,6 @@ const Main = () => {
     fetchProducts();
   },[]);
 
-
   return ( 
     <div className="Main">
     <Routes>
@@ -34,7 +33,7 @@ const Main = () => {
               products={products}
           />} />
 
-          <Route exact path="/product" element={<OneProduct />} />
+          <Route exact path="/product/:id" element={<OneProduct />} />
 
           <Route exact path="/create-product" element={<CreateProduct />} />
 

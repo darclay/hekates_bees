@@ -1,9 +1,10 @@
 import './Products.css';
 import Navigation from '../../components/layout/Navigation.jsx';
 import bee from '../../assets/pictures/golden_bee.jpg';
+import { Link } from 'react-router-dom';
 
 const Products = ({products}) => {
-  console.log({products});
+  
   return (  
     <div className="productsDiv">
           <div className="productsBackgroundDiv" style={{ backgroundImage: `url(${bee})` }}>
@@ -25,6 +26,7 @@ const Products = ({products}) => {
               
                 <div className="productsRightDiv">
                     <h1>HEKATES BEE PRODUCTS</h1>
+                    <Link to="/create-product"><button className="goToCreate">Create a Product</button></Link>
                 </div>
           </div>  
           
