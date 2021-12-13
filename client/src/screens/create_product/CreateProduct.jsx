@@ -1,13 +1,26 @@
 import './CreateProduct.css';
 import Navigation from '../../components/layout/Navigation.jsx';
 import bee from '../../assets/pictures/golden_bee.jpg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { createProduct } from '../../services/product.js';
-// import { useNavigate } from 'react-router-dom';
 
 const CreateProduct = () => {
-  // const navigate = useNavigate();
-  
+// -----------------------------------------------
+const [fade, setFade] = useState('');
+
+useEffect(() => {
+  const timeout = setInterval(() => {
+      if(fade === 'fade-in'){
+        setFade('fade-out')
+      }else {
+        // setFadeObject({fade:'fade-in'})
+      }
+  }, 2000)
+
+  return () => clearInterval(timeout)
+},[fade])
+
+// handle submit ----------------------------------
   const [formData, setFormData] = useState({
       name: '',
       description: '',
@@ -15,7 +28,7 @@ const CreateProduct = () => {
       img_url: '',
   })
 
-  // const [isCreated, setCreated] = useState(false);
+  const [isCreated, setCreated] = useState(false);
 
   const handleChange = (ev) => {
     const { name, value } = ev.target
@@ -27,23 +40,26 @@ const CreateProduct = () => {
   
   const handleSubmit = async (ev) => {
     ev.preventDefault();
-    // const created = await createProduct(formData);
-    await createProduct(formData);
-    
-    // setCreated({ created });
+    const created = await createProduct(formData);
+    setCreated({ created });
+    setFade('fade-in');
   }
-  
-  // if (isCreated) {
-  //   navigate("/products")
-  // };  
-  
+
+  const showCreated = () => {
+    if (isCreated) {
+      return "item created"
+    }else {
+      return ""
+    }
+}
+
   return ( 
        
     <div className="createProductDiv">
           <div className="productsBackgroundDiv" style={{ backgroundImage: `url(${bee})` }}>
 
                 <div className="createProductLeftDiv">
-                      <form onSubmit={handleSubmit}>
+                      <form id="form1" onSubmit={handleSubmit}>
 
                           <h3>ADD A PRODUCT</h3>
                           <label>
@@ -88,9 +104,13 @@ const CreateProduct = () => {
 
                           <button>submit</button>
                       </form>
+                      
+                      <p className={fade}>{`${showCreated()}`}</p>
                 </div>
               
-                <div className="createProductRightDiv"></div>
+                <div className="createProductRightDiv">
+            
+                </div>
           </div>  
           
           <Navigation />

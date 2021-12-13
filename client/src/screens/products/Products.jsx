@@ -12,7 +12,11 @@ const Products = ({products}) => {
                 <div className="productsLeftDiv">
                   <p>left div</p>
                     {products ?
-                    products.map((product) => (<div key={product.id}><p>{product.name}</p></div>))
+                    products.map((product) => (
+                    <div key={product.id}>
+                      <p>{product.name}</p>
+                      <p>hello</p>
+                    </div>))
                     :
                     null
                     }

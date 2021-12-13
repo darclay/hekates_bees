@@ -12,3 +12,7 @@
 .productsDiv .productsBackgroundDiv {
   display: flex;
 }
+.productsDiv .productsBackgroundDiv .productsLeftDiv div {
+background-color: greenyellow;
+border: 6px solid black;
+}

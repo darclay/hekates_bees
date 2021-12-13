@@ -7,11 +7,24 @@ import { useLocation } from 'react-router-dom';
 const Navigation = () => {
   const location = useLocation();
 
+  const listItemStatus = () => {
+    if (location.pathname === '/products'){
+      return "active"
+    }else if (location.pathname === '/create-product'){
+      return "active"
+    }else {
+      return "";
+    }
+  }
+  
+  
+  
+  
   return ( 
     <div className="navigation">
       <ul>
 
-        <li className={`list ${location.pathname === '/products' ? "active" : ""}`} >
+        <li className={`list ${listItemStatus()}`} >
           <a href="/products">
             <span className="icon"><img id="package" src={product} alt="product icon"/></span>
             <span className="text">PRODUCTS</span> 
