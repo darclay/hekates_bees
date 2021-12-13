@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { createProduct } from '../../services/product.js';
 
 const CreateProduct = () => {
-// -----------------------------------------------
+// handle fade ------------------------------------
 const [fade, setFade] = useState('');
 
 useEffect(() => {
@@ -52,6 +52,20 @@ useEffect(() => {
       return ""
     }
 }
+
+//handle reset ------------------------------------
+  const [reset] = useState({
+      name: '',
+      description: '',
+      price: '',
+      img_url: '',
+  })
+
+  const handlereset = () => {
+      console.log('reset');
+      setFormData(reset);
+  }
+
 
   return ( 
        
@@ -104,6 +118,7 @@ useEffect(() => {
 
                           <button>submit</button>
                       </form>
+                      <button onClick={handlereset}>reset</button>
                       
                       <p className={fade}>{`${showCreated()}`}</p>
                 </div>
