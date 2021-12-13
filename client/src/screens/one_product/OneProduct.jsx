@@ -23,12 +23,13 @@ const OneProduct = () => {
   // Delete---------------------------------------------------------
   const [ productDeleted, setProductDeleted] = useState(false);
   
-
+  // useEffect(() => {
   const handleDelete = () => {
       deleteProduct(product.id)
       setProductDeleted(!productDeleted)
       console.log(product)
   }
+// },[productDeleted])
   
   if (productDeleted){
     navigate("/products")
