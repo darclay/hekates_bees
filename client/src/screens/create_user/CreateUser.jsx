@@ -1,6 +1,6 @@
 import './CreateUser.css';
 import { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const CreateUser = ({handleRegister}) => {
    
@@ -20,6 +20,7 @@ const CreateUser = ({handleRegister}) => {
   };
     
     return (
+      <div className="createUserDiv">
       <form
         onSubmit={(ev) => {
           ev.preventDefault();
@@ -57,24 +58,10 @@ const CreateUser = ({handleRegister}) => {
           />
         </label>
         <br />
-        <button>Submit</button>
+        <button>submit</button>
       </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
+      <Link to="/"><button>back to home</button></Link>
+      </div>
    );
 }
  

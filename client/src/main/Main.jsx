@@ -12,7 +12,7 @@ import CreateUser from '../screens/create_user/CreateUser.jsx';
 import Login from '../screens/login/Login.jsx';
 import ErrorPage from '../screens/error_page/ErrorPage.jsx';
 import { getProducts, deleteProduct } from '../services/product.js';
-import { registerUser, loginUser } from '../services/auth.js';
+import { registerUser, loginUser, removeToken } from '../services/auth.js';
 
 
 const Main = () => {
@@ -49,11 +49,12 @@ const Main = () => {
     navigate('/');
   };
 
-  // const handleLogout = () => {
-  //   setCurrentUser(null);
-  //   localStorage.removeItem('authToken');
-  //   removeToken();
-  // };
+  const handleLogout = () => {
+    console.log("logout?")
+    setCurrentUser(null);
+    localStorage.removeItem('authToken');
+    removeToken();
+  };
 
 //----RENDER-------------------------------------------
   return ( 
@@ -76,7 +77,8 @@ const Main = () => {
         {/* ---------------------------------------- */}
           
           <Route exact path="/blog" element={<Blog />} />
-          
+              handleLogout={handleLogout}
+              
           <Route exact path="/admin-blog" element={<AdminBlog />} />
      
           <Route exact path="/create-user" element={<CreateUser 

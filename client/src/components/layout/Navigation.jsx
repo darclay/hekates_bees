@@ -2,7 +2,7 @@ import './Navigation.css';
 import bee from '../../assets/icons/bee.png';
 import product from '../../assets/icons/product.png';
 import blog from '../../assets/icons/file.png';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation, useParams, Link } from 'react-router-dom';
 
 const Navigation = () => {
   const location = useLocation();
@@ -20,32 +20,29 @@ const Navigation = () => {
     }
   }
   
-  
-  
-  
   return ( 
     <div className="navigation">
       <ul>
 
         <li className={`list ${listItemStatus()}`} >
-          <a href="/products">
+          <Link to="/products">
             <span className="icon"><img id="package" src={product} alt="product icon"/></span>
             <span className="text">PRODUCTS</span> 
-          </a>
+          </Link>
         </li>
         
         <li className={`list ${location.pathname === '/' ? "active" : ""}`} >
-          <a href="/">
+          <Link to="/">
             <span className="icon"><img id="bee" src={bee} alt="bee icon"/></span>
             <span className="text">HOME</span> 
-          </a>
+          </Link>
         </li>
 
         <li className={`list ${location.pathname === '/blog' ? "active" : ""}`} >
-          <a href="/blog">
+          <Link to="/blog">
             <span className="icon"><img id="blog" src={blog} alt="blog icon"/></span>
             <span className="text">BLOG</span> 
-          </a>
+          </Link>
         </li>
         <div className="circle"></div>
       </ul>
