@@ -1,7 +1,7 @@
 import './OneProduct.css';
 import Navigation from '../../components/layout/Navigation.jsx';
 import bee from '../../assets/pictures/golden_bee.jpg';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getProduct } from '../../services/product.js';
 import { useState, useEffect } from 'react';
 
@@ -22,7 +22,6 @@ const OneProduct = ({handleDelete}) => {
   return ( 
     <div className="productDiv">
           <div className="productBackgroundDiv" style={{ backgroundImage: `url(${bee})` }}>
-                
                 
                 <div className="oneProductLeftDiv">
                     {product ?  

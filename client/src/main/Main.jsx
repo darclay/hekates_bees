@@ -13,6 +13,7 @@ import Login from '../screens/login/Login.jsx';
 import ErrorPage from '../screens/error_page/ErrorPage.jsx';
 import { getProducts, deleteProduct, createProduct } from '../services/product.js';
 import { registerUser, loginUser, removeToken } from '../services/auth.js';
+import { getPosts } from '../services/posts.js';
 
 
 const Main = () => {
@@ -57,10 +58,21 @@ const Main = () => {
 
   const handleLogout = () => {
     console.log("logout?")
-    setCurrentUser(null);
     localStorage.removeItem('authToken');
     removeToken();
+    setCurrentUser(null);
+    navigate("/")
   };
+//---POSTS---------------------------------------
+  const [ posts, setPosts ] = useState();
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const postList = await getPosts();
+      setPosts(postList);
+    };
+    fetchPosts();
+  },[]);
 
 //----RENDER-------------------------------------------
   return ( 
@@ -84,8 +96,11 @@ const Main = () => {
 
         {/* ---------------------------------------- */}
           
-          <Route exact path="/blog" element={<Blog />} />
-              handleLogout={handleLogout}
+          <Route exact path="/blog" element={<Blog 
+            handleLogout={handleLogout}
+            posts={posts}
+          />} />
+              
               
           <Route exact path="/admin-blog" element={<AdminBlog />} />
      

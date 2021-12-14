@@ -1,12 +1,15 @@
 .blogFlexContainer {
   display: flex;
 }
-.blogDiv .blogLeftDiv {
+.blogDiv .blogLeftBottomDiv {
   background-color: black;
   width: 50%;
-  height: calc(100vh - 100px);
+  height: calc(70vh - 100px);
 }
 .blogDiv .blogRightDiv {
   width: 50%;
   height: calc(100vh - 100px);
+}
+.blogDiv .blogLeftDiv .postCard {
+  background-color: white;
 }

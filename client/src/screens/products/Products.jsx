@@ -10,9 +10,7 @@ const Products = ({products}) => {
           <div className="productsBackgroundDiv" style={{ backgroundImage: `url(${bee})` }}>
                 
                 
-                <div className="productsLeftDiv">
-                  <p>left div</p>
-                    
+                <div className="productsLeftDiv">           
                     {products
                     ?
                     products.map((product) => (

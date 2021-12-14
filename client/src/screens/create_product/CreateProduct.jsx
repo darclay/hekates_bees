@@ -1,7 +1,7 @@
 import './CreateProduct.css';
 import Navigation from '../../components/layout/Navigation.jsx';
 import bee from '../../assets/pictures/golden_bee.jpg';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const CreateProduct = ({handleCreate}) => {
 
