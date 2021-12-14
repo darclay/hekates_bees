@@ -2,14 +2,60 @@ import './Blog.css';
 import Navigation from '../../components/layout/Navigation.jsx';
 import flower from '../../assets/pictures/bee_flower.jpg';
 import { Link } from 'react-router-dom';
-import AdminBlog from '../admin_blog/AdminBlog.jsx';
+import { useState } from 'react';
 
-const Blog = ({handleLogout, posts}) => {
+
+const Blog = ({handleLogout, posts, handleCreatePosts}) => {
+    
+    // handle Form Change ----------------------------------
+    const [formData, setFormData] = useState({
+      title: '',
+      content: '',
+  })
+  
+  const handleChange = (ev) => {
+    const { name, value } = ev.target
+    setFormData({
+      ...formData,
+      [name]: value,
+    })
+  };
+
   return ( 
     <div className="blogDiv">  
         <div className="blogFlexContainer">
             <div className="blogLeftTopDiv">
-              <AdminBlog />
+                <div className="blogPost">
+                    <form id="createBlogForm" 
+                      onSubmit={(ev) => {
+                        ev.preventDefault();
+                        handleCreatePosts(formData);
+                      }}>
+
+                        <h3>ADD A TITLE</h3>
+                        <label>
+                          <input 
+                          type='text' 
+                          placeholder='title'
+                          name='title' 
+                          value={formData.title} 
+                          onChange={handleChange} 
+                          />
+                        </label>
+
+                        <label>
+                          <input
+                          type='text' 
+                          placeholder='content'
+                          name='content' 
+                          value={formData.content} 
+                          onChange={handleChange} 
+                          />
+                        </label>
+                      
+                        <button>submit</button>
+                    </form>
+                </div>
             </div>
             <div className="blogLeftBottomDiv">
                 {posts ?

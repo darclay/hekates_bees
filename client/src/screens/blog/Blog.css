@@ -10,6 +10,6 @@
   width: 50%;
   height: calc(100vh - 100px);
 }
-.blogDiv .blogLeftDiv .postCard {
+.blogDiv .blogLeftBottomDiv .postCard {
   background-color: white;
 }

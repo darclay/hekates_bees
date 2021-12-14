@@ -7,13 +7,12 @@ import CreateProduct from '../screens/create_product/CreateProduct.jsx';
 import OneProduct from '../screens/one_product/OneProduct.jsx';
 import Products from '../screens/products/Products.jsx';
 import EditProduct from '../screens/edit_product/EditProduct.jsx';
-import AdminBlog from '../screens/admin_blog/AdminBlog.jsx';
 import CreateUser from '../screens/create_user/CreateUser.jsx';
 import Login from '../screens/login/Login.jsx';
 import ErrorPage from '../screens/error_page/ErrorPage.jsx';
 import { getProducts, deleteProduct, createProduct } from '../services/product.js';
 import { registerUser, loginUser, removeToken } from '../services/auth.js';
-import { getPosts } from '../services/posts.js';
+import { getPosts, createPost } from '../services/posts.js';
 
 
 const Main = () => {
@@ -74,6 +73,11 @@ const Main = () => {
     fetchPosts();
   },[]);
 
+  const handleCreatePosts = async (formData) => {
+    const created = await createPost(formData);
+    setPosts(prevState => [...prevState, created])
+  }
+
 //----RENDER-------------------------------------------
   return ( 
     <div className="Main">
@@ -99,10 +103,8 @@ const Main = () => {
           <Route exact path="/blog" element={<Blog 
             handleLogout={handleLogout}
             posts={posts}
+            handleCreatePosts={handleCreatePosts}
           />} />
-              
-              
-          <Route exact path="/admin-blog" element={<AdminBlog />} />
      
           <Route exact path="/create-user" element={<CreateUser 
             handleRegister={handleRegister}
