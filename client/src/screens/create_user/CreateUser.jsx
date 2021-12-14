@@ -1,51 +1,64 @@
 import './CreateUser.css';
+import { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 
-const CreateUser = () => {
-  
-  
- 
-    // const navigate = useNavigate();
+const CreateUser = ({handleRegister}) => {
+   
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    password: '',
+  });
+  const { username, email, password } = formData;
+
+  const handleChange = (ev) => {
+    const { name, value } = ev.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
     
-    // const [formData, setFormData] = useState({
-    //     name: '',
-    //     description: '',
-    //     price: '',
-    //     img_url: '',
-    // })
-  
-    // const [isCreated, setCreated] = useState(false);
-  
-    // const handleChange = (ev) => {
-    //   const { name, value } = ev.target
-    //   setFormData({
-    //     ...formData,
-    //     [name]: value,
-    //   })
-    // };
-    
-    // const handleSubmit = async (ev) => {
-      // ev.preventDefault();
-      // const created = await createProduct(formData);
-      // await createProduct(formData);
-      
-      // setCreated({ created });
-    // }
-    
-    // if (isCreated) {
-    //   navigate("/products")
-    // };   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  return ( 
-    <h1>Create User</h1>
+    return (
+      <form
+        onSubmit={(ev) => {
+          ev.preventDefault();
+          handleRegister(formData);
+        }}
+      >
+        <h3>Register</h3>
+        <label>
+          Username:
+          <input
+            type='text'
+            name='username'
+            value={username}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Email:
+          <input
+            type='text'
+            name='email'
+            value={email}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Password:
+          <input
+            type='password'
+            name='password'
+            value={password}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <button>Submit</button>
+      </form>
 
 
 

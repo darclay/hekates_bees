@@ -12,9 +12,12 @@ import CreateUser from '../screens/create_user/CreateUser.jsx';
 import Login from '../screens/login/Login.jsx';
 import ErrorPage from '../screens/error_page/ErrorPage.jsx';
 import { getProducts, deleteProduct } from '../services/product.js';
+import { registerUser, loginUser } from '../services/auth.js';
 
 
 const Main = () => {
+  let navigate = useNavigate();
+  //-------PRODUCTS--------------------------------------  
   const [ products, setProducts ] = useState();
   
   useEffect(() => {
@@ -25,16 +28,34 @@ const Main = () => {
     fetchProducts();
   },[]);
 
-  
-  let navigate = useNavigate();
-
   const handleDelete = async (id) => {
     await deleteProduct(id);
     setProducts((prevState) => prevState.filter((product) => product.id !== id));
     navigate("/products")
-}
+  }
+//------USERS-------------------------------------------
+  const [ currentUser, setCurrentUser ] = useState(null);
 
+  const handleRegister = async (formData) => {
+    const userData = await registerUser(formData);
+    setCurrentUser(userData);
+    console.log(handleRegister);
+    navigate('/');
+  };
 
+  const handleLogin = async (formData) => {
+    const userData = await loginUser(formData);
+    setCurrentUser(userData);
+    navigate('/');
+  };
+
+  // const handleLogout = () => {
+  //   setCurrentUser(null);
+  //   localStorage.removeItem('authToken');
+  //   removeToken();
+  // };
+
+//----RENDER-------------------------------------------
   return ( 
     <div className="Main">
     <Routes>
@@ -52,15 +73,19 @@ const Main = () => {
 
           <Route exact path="/edit-product/:id" element={<EditProduct />} />
 
-        {/* -------------------------------------------------- */}
+        {/* ---------------------------------------- */}
           
           <Route exact path="/blog" element={<Blog />} />
           
           <Route exact path="/admin-blog" element={<AdminBlog />} />
      
-          <Route exact path="/create-user" element={<CreateUser />} />  
+          <Route exact path="/create-user" element={<CreateUser 
+            handleRegister={handleRegister}
+          />} />  
           
-          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/login" element={<Login 
+            handleLogin={handleLogin}
+          />} />
 
           <Route path="*" element={<ErrorPage />} />
     </Routes>

@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react';
 
 const OneProduct = ({handleDelete}) => {
   let {id} = useParams();
-  const navigate = useNavigate();
 
   const [ product, setProduct] = useState();
   console.log(product)
