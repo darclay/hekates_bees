@@ -16,7 +16,7 @@ Administrator: everything under client plus a hidden login on the frontend to gi
 - _Have fully functional CRUD backend using Ruby on Rails,_
 - _Set up user authentication on backend,_
 - _Set up a professional looking frontend site using React, and_
-- _Use CSS to style the site and to have a mobile friendly experience along with desktop._
+- _Use CSS to style the site and to have a mobile friendly experience._
 
 ### Libraries and Dependencies
 
@@ -34,7 +34,7 @@ Basic Layout:
 Home
 ![](https://i.imgur.com/U9DgP6I.png)
 Products
-![](https://i.imgur.com/FNKdweJ.png)
+![](https://i.imgur.com/FNKdweJ.png) 
 Product
 ![](https://i.imgur.com/pjq3zy6.png)
 Add Product
