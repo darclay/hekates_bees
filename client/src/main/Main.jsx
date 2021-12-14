@@ -11,7 +11,7 @@ import AdminBlog from '../screens/admin_blog/AdminBlog.jsx';
 import CreateUser from '../screens/create_user/CreateUser.jsx';
 import Login from '../screens/login/Login.jsx';
 import ErrorPage from '../screens/error_page/ErrorPage.jsx';
-import { getProducts, deleteProduct } from '../services/product.js';
+import { getProducts, deleteProduct, createProduct } from '../services/product.js';
 import { registerUser, loginUser, removeToken } from '../services/auth.js';
 
 
@@ -28,9 +28,15 @@ const Main = () => {
     fetchProducts();
   },[]);
 
+  const handleCreate = async (formData) => {
+    const created = await createProduct(formData);
+    setProducts(prevState => [...prevState, created])
+    navigate('/products');
+  }
+
   const handleDelete = async (id) => {
     await deleteProduct(id);
-    setProducts((prevState) => prevState.filter((product) => product.id !== id));
+    setProducts((prevState) => prevState.filter((product) => product.id !== Number(id)));
     navigate("/products")
   }
 //------USERS-------------------------------------------
@@ -70,7 +76,9 @@ const Main = () => {
               handleDelete={handleDelete}
           />} />
 
-          <Route exact path="/create-product" element={<CreateProduct />} />
+          <Route exact path="/create-product" element={<CreateProduct 
+              handleCreate={handleCreate}
+          />} />
 
           <Route exact path="/edit-product/:id" element={<EditProduct />} />
 
