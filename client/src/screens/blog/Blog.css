@@ -1,1 +1,12 @@
-/* blog.css */
+.blogFlexContainer {
+  display: flex;
+}
+.blogDiv .blogLeftDiv {
+  background-color: black;
+  width: 50%;
+  height: calc(100vh - 100px);
+}
+.blogDiv .blogRightDiv {
+  width: 50%;
+  height: calc(100vh - 100px);
+}

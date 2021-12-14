@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import Home from '../screens/home/Home.jsx';
 import Blog from '../screens/blog/Blog.jsx';
@@ -11,11 +11,12 @@ import AdminBlog from '../screens/admin_blog/AdminBlog.jsx';
 import CreateUser from '../screens/create_user/CreateUser.jsx';
 import Login from '../screens/login/Login.jsx';
 import ErrorPage from '../screens/error_page/ErrorPage.jsx';
-import { getProducts } from '../services/product.js';
+import { getProducts, deleteProduct } from '../services/product.js';
+
 
 const Main = () => {
   const [ products, setProducts ] = useState();
-
+  
   useEffect(() => {
     const fetchProducts = async () => {
       const productList = await getProducts();
@@ -23,6 +24,16 @@ const Main = () => {
     };
     fetchProducts();
   },[]);
+
+  
+  let navigate = useNavigate();
+
+  const handleDelete = async (id) => {
+    await deleteProduct(id);
+    setProducts((prevState) => prevState.filter((product) => product.id !== id));
+    navigate("/products")
+}
+
 
   return ( 
     <div className="Main">
@@ -33,7 +44,9 @@ const Main = () => {
               products={products}
           />} />
 
-          <Route exact path="/product/:id" element={<OneProduct />} />
+          <Route exact path="/product/:id" element={<OneProduct 
+              handleDelete={handleDelete}
+          />} />
 
           <Route exact path="/create-product" element={<CreateProduct />} />
 
