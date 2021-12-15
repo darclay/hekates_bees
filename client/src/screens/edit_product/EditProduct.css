@@ -1,0 +1,20 @@
+.productBackgroundDiv[style*="bee"] {
+  background-size: cover;
+  height: 100vh;
+}
+/* .productBackgroundDiv {
+  display: flex;
+  justify-content: center;
+} */
+.editDiv .productBackgroundDiv .greenBorder #editForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  background-color: white;
+}
+.editDiv .productBackgroundDiv .greenBorder {
+  background-color: #A1BB94;
+  width: 500px;
+  border: 20% 0px 20% 0px;
+}

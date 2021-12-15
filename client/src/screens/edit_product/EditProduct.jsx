@@ -2,7 +2,8 @@ import './EditProduct.css';
 import { useState, useEffect } from 'react';
 import { getProduct, putProduct } from '../../services/product.js';
 import { Navigate, useParams } from 'react-router-dom';
-
+import bee from '../../assets/pictures/golden_bee.jpg';
+import Navigation from '../../components/layout/Navigation.jsx';
 
 const EditProduct = () => {
   let { id } = useParams();
@@ -46,65 +47,60 @@ const EditProduct = () => {
   
   return ( 
     <div className='editDiv'>
-
-        <form id="editForm" onSubmit={handleSubmit}>
-        
-          <img className="imgurl" src={formData.img_url} alt="product" onChange={handleChange} />
+      <div className="productBackgroundDiv" style={{ backgroundImage: `url(${bee})` }}>
+        <div className="greenBorder">
+          <form id="editForm" onSubmit={handleSubmit}>
           
-          <div className='formDiv'>
-                <label>
-                  <input 
-                  type='text' 
-                  placeholder='product name'
-                  name='name' 
-                  value={formData.name} 
-                  onChange={handleChange} 
-                  />
-                </label>
+            <img className="imgurl" src={formData.img_url} alt="product" onChange={handleChange} />
+            
+            <div className='formDiv'>
+                  <label>
+                    <input 
+                    type='text' 
+                    placeholder='product name'
+                    name='name' 
+                    value={formData.name} 
+                    onChange={handleChange} 
+                    />
+                  </label>
 
-                <label>
-                  <input
-                  type='text' 
-                  placeholder='description'
-                  name='description' 
-                  value={formData.description} 
-                  onChange={handleChange} 
-                  />
-                </label>
-                
-                <label>
-                  <input
-                  type='text' 
-                  placeholder='price'
-                  name='price' 
-                  value={formData.price} 
-                  onChange={handleChange} 
-                  />
-                </label>
-                
-                <label>
-                  <input
-                  type='text' 
-                  placeholder='image url'
-                  name='img_url' 
-                  value={formData.img_url} 
-                  onChange={handleChange} 
-                  />
-                </label>
-
-                <button type="submit" className="save-button">Save</button>
-          </div>
-
-        </form>
-  
-  </div>
-   
-   
-   
-   
-   
-   
-   
+                  <label>
+                    <input
+                    type='text' 
+                    placeholder='description'
+                    name='description' 
+                    value={formData.description} 
+                    onChange={handleChange} 
+                    />
+                  </label>
+                  
+                  <label>
+                    <input
+                    type='text' 
+                    placeholder='price'
+                    name='price' 
+                    value={formData.price} 
+                    onChange={handleChange} 
+                    />
+                  </label>
+                  
+                  <label>
+                    <input
+                    type='text' 
+                    placeholder='image url'
+                    name='img_url' 
+                    value={formData.img_url} 
+                    onChange={handleChange} 
+                    />
+                  </label>
+        
+                  <button type="submit" className="save-button">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <Navigation />
+    </div>
    );
 }
  
