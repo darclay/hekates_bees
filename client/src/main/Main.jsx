@@ -11,7 +11,7 @@ import CreateUser from '../screens/create_user/CreateUser.jsx';
 import Login from '../screens/login/Login.jsx';
 import ErrorPage from '../screens/error_page/ErrorPage.jsx';
 import { getProducts, deleteProduct, createProduct } from '../services/product.js';
-import { registerUser, loginUser, removeToken } from '../services/auth.js';
+import { registerUser, loginUser, removeToken, verifyUser } from '../services/auth.js';
 import { getPosts, createPost } from '../services/posts.js';
 
 
@@ -41,6 +41,14 @@ const Main = () => {
   }
 //------USERS-------------------------------------------
   const [ currentUser, setCurrentUser ] = useState(null);
+  
+  useEffect(() => {
+    const handleVerify = async () => {
+      const userData = await verifyUser();
+      setCurrentUser(userData);
+    };
+    handleVerify();
+  }, []);
 
   const handleRegister = async (formData) => {
     const userData = await registerUser(formData);
