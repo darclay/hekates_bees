@@ -1,14 +1,49 @@
 .productsBackgroundDiv[style*="bee"] {
   background-size: cover;
 }
-.createProductDiv .productsBackgroundDiv .createProductLeftDiv {
-  width: 50%;
-  height: calc(100hv - 100px);
-}
-.createProductDiv .productsBackgroundDiv .createProductRightDiv {
-  width: 50%;
+.productsBackgroundDiv {
   height: calc(100vh - 100px);
 }
-.createProductDiv .productsBackgroundDiv {
+.createProductDiv .productsBackgroundDiv .createProductLeftDiv {
+  width: 60%;
+  height: calc(100vh - 100px);
+}
+.createProductDiv .productsBackgroundDiv .createProductRightDiv {
+  width: 40%;
+  height: calc(100vh - 100px);
+}
+.createProductDiv .productsBackgroundDiv .createProductLeftDiv {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.createProductDiv .productsBackgroundDiv .createProductLeftDiv form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 90%;
+  padding: 20px;
+}
+.createProductDiv .productsBackgroundDiv .createProductLeftDiv input {
+  padding: 5px;
+  margin: 10px;
+}
+.createProductDiv .productsBackgroundDiv .createProductLeftDiv .createGreenBorder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #A1BB94;
+  width: 500px;
+  border-radius: 5px;
+  padding: 20px 0 20px 0;
+}
+.createProductDiv .productsBackgroundDiv .createProductLeftDiv button {
+  background-color: #A1BB94;
+  padding: 10px 0px 10px 0px;
+  width: 100px;
+  margin-top: 10px;
 }

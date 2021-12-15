@@ -15,6 +15,8 @@ const Navigation = () => {
       return "active"
     }else if (location.pathname === `/product/${id}`){
       return "active"
+    }else if (location.pathname === `/edit-product/${id}`){
+      return "active"
     }else {
       return "";
     }

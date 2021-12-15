@@ -93,7 +93,7 @@ const EditProduct = () => {
                     onChange={handleChange} 
                     />
                   </label>
-        
+                  <br/>
                   <button type="submit" className="save-button">Save</button>
             </div>
           </form>

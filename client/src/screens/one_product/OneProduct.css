@@ -1,17 +1,20 @@
 .productBackgroundDiv[style*="bee"] {
   background-size: cover;
 }
+.productBackgroundDiv {
+  height: calc(100vh - 100px);
+}
 .productDiv .productBackgroundDiv .oneProductLeftDiv {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 60%;
-  height: calc(100hv - 100px);
+  height: calc(100vh - 100px);
 }
 .productDiv .productBackgroundDiv .oneProductRightDiv {
   width: 40%;
   height: calc(100vh - 100px);
-  padding-top: 25%;
+  padding-top: 10%;
   padding-right: 30px;
 }
 .productDiv .productBackgroundDiv {

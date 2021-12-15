@@ -39,6 +39,7 @@ const CreateProduct = ({handleCreate}) => {
           <div className="productsBackgroundDiv" style={{ backgroundImage: `url(${bee})` }}>
 
                 <div className="createProductLeftDiv">
+                  <div className='createGreenBorder'>
                       <form id="createForm" onSubmit={(ev) => {
                         ev.preventDefault();
                         handleCreate(formData);
@@ -87,6 +88,7 @@ const CreateProduct = ({handleCreate}) => {
 
                           <button>submit</button>
                       </form>
+                    </div>
                       <button onClick={handlereset}>reset</button>
                      
                 </div>

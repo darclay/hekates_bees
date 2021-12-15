@@ -1,20 +1,36 @@
 .productBackgroundDiv[style*="bee"] {
   background-size: cover;
-  height: 100vh;
 }
-/* .productBackgroundDiv {
+.productBackgroundDiv {
   display: flex;
   justify-content: center;
-} */
+  align-items: center;
+  height: calc(100vh - 100px);
+}
 .editDiv .productBackgroundDiv .greenBorder #editForm {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  justify-content: center;
+  width: 90%;
   background-color: white;
+  padding: 20px;
+}
+.editDiv .productBackgroundDiv .greenBorder #editForm .formDiv input {
+  padding: 5px;
+  margin: 10px;
 }
 .editDiv .productBackgroundDiv .greenBorder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #A1BB94;
   width: 500px;
-  border: 20% 0px 20% 0px;
+  height: 650px;
+  border-radius: 5px; 
+}
+.editDiv .productBackgroundDiv .greenBorder #editForm .formDiv button {
+background-color: #A1BB94;
+padding: 10px 0px 10px 0px;
+width: 100px;
 }
