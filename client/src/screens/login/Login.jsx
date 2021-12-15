@@ -18,13 +18,15 @@ const Login = ({handleLogin},) => {
   };  
   
   return ( 
-    <form onSubmit={(ev)=> {
+    <div className="loginDiv">
+    <form className="loginForm" onSubmit={(ev)=> {
       ev.preventDefault();
       handleLogin(formData);
     }}>
       <h3>Login</h3>
       <label>
         Username:
+        <br/>
         <input
           type='text'
           name='username'
@@ -35,6 +37,7 @@ const Login = ({handleLogin},) => {
       <br />
       <label>
         Password:
+        <br/>
         <input
           type='password'
           name='password'
@@ -43,9 +46,11 @@ const Login = ({handleLogin},) => {
         />
       </label>
       <br />
-      <Link to='/create-user'>Register</Link>
+      <Link to='/create-user'><button>register</button></Link>
       <button>Submit</button>
+      <Link to='/'><button>back to home</button></Link>
     </form>
+    </div>
    );
 }
  

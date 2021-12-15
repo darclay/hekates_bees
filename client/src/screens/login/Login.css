@@ -1,0 +1,18 @@
+.loginDiv {
+  background-color: black;
+  height: 100vh;
+  color: white;
+}
+.loginDiv .loginForm {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+}
+.loginDiv .loginForm button {
+  padding: 20px;
+  margin: 20px;
+}
+.loginDiv .loginForm h3 {
+  padding: 20px;
+}

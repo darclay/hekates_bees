@@ -1,0 +1,8 @@
+.createUserDiv {
+  background-color: black;
+  height: 100vh;
+  color: white;
+}
+.createUserDiv .createUserForm {
+  padding-top: 100px;
+}

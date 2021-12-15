@@ -32,7 +32,12 @@ const Blog = ({handleLogout, posts, handleCreatePosts}) => {
                         ev.preventDefault();
                         handleCreatePosts(formData);
                       }}>
-
+<div className="topDiv">
+<Link to='/login'>
+<button>login</button>
+</Link>
+<button onClick={handleLogout}>logout</button>
+</div>
                         <h3>ADD A POST</h3>
                         <label>
                           <input 
@@ -70,16 +75,7 @@ const Blog = ({handleLogout, posts, handleCreatePosts}) => {
                     }
             </div>
         </div>
-        <div className="blogRightDiv"style={{ backgroundImage: `url(${flower})` }}>
-                <div className="topDiv">
-                    <Link to='/login'>
-                      <button>login</button>
-                    </Link>
-                    <button onClick={handleLogout}>logout</button>
-                </div>
-            </div>
-    
-        
+        <div className="blogRightDiv"style={{ backgroundImage: `url(${flower})` }}></div>      
     </div>
     <Navigation/>
     </div>

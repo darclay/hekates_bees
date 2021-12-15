@@ -22,6 +22,7 @@ const CreateUser = ({handleRegister}) => {
     return (
       <div className="createUserDiv">
       <form
+        className="createUserForm"
         onSubmit={(ev) => {
           ev.preventDefault();
           handleRegister(formData);
@@ -30,6 +31,7 @@ const CreateUser = ({handleRegister}) => {
         <h3>Register</h3>
         <label>
           Username:
+          <br/>
           <input
             type='text'
             name='username'
@@ -40,6 +42,7 @@ const CreateUser = ({handleRegister}) => {
         <br />
         <label>
           Email:
+          <br/>
           <input
             type='text'
             name='email'
@@ -50,6 +53,7 @@ const CreateUser = ({handleRegister}) => {
         <br />
         <label>
           Password:
+          <br/>
           <input
             type='password'
             name='password'
