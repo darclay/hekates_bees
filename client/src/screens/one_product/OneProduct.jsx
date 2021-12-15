@@ -26,15 +26,17 @@ const OneProduct = ({handleDelete}) => {
                 <div className="oneProductLeftDiv">
                     {product ?  
                     <div className="productDetail">
-                        <h3>{product.name}</h3>
-                        <img src={product.img_url} alt="product"/>
-                        <p className="pDescription">{product.description}</p>
-                        <p className="pPrice">{product.price}</p>
+                      <div className="detail">
+                          <h3>{product.name}</h3>
+                          <img src={product.img_url} alt="product"/>
+                          <p className="pDescription">{product.description}</p>
+                          <p className="pPrice">{`$${product.price}`}</p>
+                      </div>
                         
-                        <div className="editAndDelete">
-                            <Link to={`/edit-product/${id}`}><button>edit</button></Link>
-                            <button onClick={() => handleDelete(id)}>delete</button>
-                        </div>
+                      <div className="editAndDelete">
+                          <Link to={`/edit-product/${id}`}><button>edit</button></Link>
+                          <button onClick={() => handleDelete(id)}>delete</button>
+                      </div>
                     </div>
                     :
                     null

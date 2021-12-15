@@ -2,13 +2,60 @@
   background-size: cover;
 }
 .productDiv .productBackgroundDiv .oneProductLeftDiv {
-  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
   height: calc(100hv - 100px);
 }
 .productDiv .productBackgroundDiv .oneProductRightDiv {
-  width: 50%;
+  width: 40%;
   height: calc(100vh - 100px);
+  padding-top: 25%;
+  padding-right: 30px;
 }
 .productDiv .productBackgroundDiv {
   display: flex;
+}
+.productDiv .productBackgroundDiv .oneProductLeftDiv .productDetail .detail {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  background-color: white;
+  width: 90%;
+}
+.productDiv .productBackgroundDiv .oneProductLeftDiv .productDetail .detail img {
+padding-left: 30px;
+padding-right: 30px;
+}
+.productDiv .productBackgroundDiv .oneProductLeftDiv .productDetail .detail h3 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  }
+.productDiv .productBackgroundDiv .oneProductLeftDiv .productDetail .detail p {
+    padding-top: 15px;
+}
+.productDiv .productBackgroundDiv .oneProductLeftDiv .productDetail .editAndDelete {
+  background-color: white;
+  width: 90%;
+  margin-bottom: 20px;
+}
+.productDiv .productBackgroundDiv .oneProductLeftDiv .productDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #A1BB94;
+  width: 80%;
+  border-radius: 5px;
+}
+.productDiv .productBackgroundDiv .oneProductLeftDiv .productDetail .editAndDelete {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 0px 25px 0px;
+}
+.productDiv .productBackgroundDiv .oneProductLeftDiv .productDetail .editAndDelete button {
+  background-color: #A1BB94;
+  padding: 10px 0px 10px 0px;
+  width: 100px;
 }

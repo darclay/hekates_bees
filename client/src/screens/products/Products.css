@@ -2,17 +2,47 @@
   background-size: cover;
 }
 .productsDiv .productsBackgroundDiv .productsLeftDiv {
-  width: 50%;
-  height: calc(100hv - 100px);
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  padding-left: 30px;
 }
 .productsDiv .productsBackgroundDiv .productsRightDiv {
-  width: 50%;
-  height: calc(100vh - 100px);
+  width: 30%;
+  padding-top: 25%;
+  padding-right: 50px;
+}
+.productsDiv .productsBackgroundDiv .productsRightDiv button {
+  padding: 10px;
+  margin: 25px;
 }
 .productsDiv .productsBackgroundDiv {
   display: flex;
 }
-.productsDiv .productsBackgroundDiv .productsLeftDiv div {
-background-color: greenyellow;
-border: 6px solid black;
+.productsDiv .productsBackgroundDiv .productsLeftDiv .productCard {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: #A1BB94;
+border-radius: 5px;
+margin: 20px;
+padding-top: 15px;
+width: 225px;
+height: 370px;
+}
+.productsDiv .productsBackgroundDiv .productsLeftDiv .productCard .contentCard {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 200px;
+  padding: 5px;
+  }
+.productsDiv .productsBackgroundDiv .productsLeftDiv .productCard {
+  text-decoration: none;
+  }
+.addToCart {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

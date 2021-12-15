@@ -14,13 +14,16 @@ const Products = ({products}) => {
                     {products
                     ?
                     products.map((product) => (
-                    <div key={product.id}>
+                    <div className='productCard'key={product.id}>
                       <Link to={`/product/${product.id}`}>
-                        <h3>{product.name}</h3>
+                        <div className="contentCard">
+                        <h4>{product.name}</h4>
                         <img src={product.img_url} alt="product"/>
                         <p>{`$${product.price}`}</p>
-                        <p>hello</p>
-                      </Link>
+                        </div>
+                        </Link>
+                        <button className="addToCart">add to cart</button>
+                      
                     </div>
                     ))
                     :
