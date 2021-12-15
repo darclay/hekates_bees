@@ -1,15 +1,49 @@
-.blogFlexContainer {
+.blogDiv {
   display: flex;
 }
-.blogDiv .blogLeftBottomDiv {
-  background-color: black;
+.blogDiv .blogFlexContainer {
+  display: flex;
+  flex-direction: column;
   width: 50%;
-  height: calc(70vh - 100px);
+}
+.blogDiv .blogLeftTopDiv {
+  padding: 50px 0 20px 0;
+  background-color: black;
+}
+.blogDiv .blogLeftTopDiv .blogPost #createBlogForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.blogDiv .blogLeftTopDiv .blogPost #createBlogForm h3 {
+  color: white;
+}
+.blogDiv .blogLeftTopDiv .blogPost #createBlogForm label {
+  margin-top: 10px;
+}
+.blogDiv .blogLeftTopDiv .blogPost #createBlogForm button {
+  padding: 10px 0px 10px 0px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.blogDiv .blogLeftBottomDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  height: calc(100vh - 322px);
+}
+.blogDiv .blogLeftBottomDiv .postCard {
+  background-color: white;
+  width: 90%;
+  padding: 20px;
+  margin: 20px 0 20px 0;
 }
 .blogDiv .blogRightDiv {
   width: 50%;
   height: calc(100vh - 100px);
 }
-.blogDiv .blogLeftBottomDiv .postCard {
-  background-color: white;
+.blogDiv .blogRightDiv[style*="flower"] {
+  background-size: cover;
 }

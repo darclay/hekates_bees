@@ -33,7 +33,7 @@ const Products = ({products}) => {
                 </div>
               
                 <div className="productsRightDiv">
-                    <h1>HEKATES BEE PRODUCTS</h1>
+                    <h1>HEKATE'S BEE PRODUCTS</h1>
                     <Link to="/create-product"><button className="goToCreate">Create a Product</button></Link>
                 </div>
           </div>  

@@ -44,7 +44,7 @@ const OneProduct = ({handleDelete}) => {
                 </div>
               
                 <div className="oneProductRightDiv">
-                    <h1>HEKATES BEE PRODUCTS</h1>
+                    <h1>HEKATE'S BEE PRODUCTS</h1>
                     
                 </div>
           </div>  

@@ -22,6 +22,7 @@ const Blog = ({handleLogout, posts, handleCreatePosts}) => {
   };
 
   return ( 
+    <div>
     <div className="blogDiv">  
         <div className="blogFlexContainer">
             <div className="blogLeftTopDiv">
@@ -32,7 +33,7 @@ const Blog = ({handleLogout, posts, handleCreatePosts}) => {
                         handleCreatePosts(formData);
                       }}>
 
-                        <h3>ADD A TITLE</h3>
+                        <h3>ADD A POST</h3>
                         <label>
                           <input 
                           type='text' 
@@ -68,8 +69,8 @@ const Blog = ({handleLogout, posts, handleCreatePosts}) => {
                     null
                     }
             </div>
-
-            <div className="blogRightDiv"style={{ backgroundImage: `url(${flower})` }}>
+        </div>
+        <div className="blogRightDiv"style={{ backgroundImage: `url(${flower})` }}>
                 <div className="topDiv">
                     <Link to='/login'>
                       <button>login</button>
@@ -77,9 +78,10 @@ const Blog = ({handleLogout, posts, handleCreatePosts}) => {
                     <button onClick={handleLogout}>logout</button>
                 </div>
             </div>
-        </div>
     
-        <Navigation/>
+        
+    </div>
+    <Navigation/>
     </div>
    );
 }
