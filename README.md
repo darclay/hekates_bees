@@ -105,17 +105,17 @@ app
 | :------------------------------: | :------------: | :-----------: | 
 | Planning Idea                    |     2 hrs      |     2 hrs     |
 | Readme                           |     2 hrs      |     2 hrs     |
-| Wireframe                        |     4 hrs      |               |
-| Component Structure              |     2 hr       |               |
-| Build Rails Server               |     2 hrs      |               |
-| Build DB, Seed, & Test           |     2 hrs      |               |
-| Set up Authentication            |     2 hrs      |               |
-| Build React Component Structure  |     2 hrs      |               |
-| Build Services, Axios, & Test    |     4 hrs      |               |
-| Build React Pages                |    10 hrs      |               |
-| CSS Styling                      |    20 hrs      |               |
+| Wireframe                        |     4 hrs      |     5 hrs     |
+| Component Structure              |     2 hr       |     3 hrs     |
+| Build Rails Server               |     2 hrs      |     4 hrs     |
+| Build DB, Seed, & Test           |     2 hrs      |     3 hrs     |
+| Set up Authentication            |     2 hrs      |     6 hrs     |
+| Build React Component Structure  |     2 hrs      |     2 hrs     |
+| Build Services, Axios, & Test    |     4 hrs      |     5 hrs     |
+| Build React Pages                |    10 hrs      |     20 hrs    |
+| CSS Styling                      |    20 hrs      |     15 hrs    |
 | -------------------------------- | :------------: | :-----------: |
-| TOTAL                            |    52 hrs      |               |  
+| TOTAL                            |    52 hrs      |     67 hrs    |  
 
 ### Server (Example)
 
@@ -127,12 +127,64 @@ Pending...
 
 ### Post-MVP
 
-Pending...
+For post-mvp I will add additional users and have the ability for them to make comments on blog posts.  I will hide create, edit, and delete function from the products and have that conditional on an administrator login.  
 
 ### Code Showcase
 
-Pending...
+Here is an example of the navigation code, which uses useLocation and conditional rendering with dynamic div classNames.
+<!-- 
+  const Navigation = () => {
+  const location = useLocation();
+  const {id} = useParams();
+
+  const listItemStatus = () => {
+    if (location.pathname === '/products'){
+      return "active"
+    }else if (location.pathname === '/create-product'){
+      return "active"
+    }else if (location.pathname === `/product/${id}`){
+      return "active"
+    }else if (location.pathname === `/edit-product/${id}`){
+      return "active"
+    }else {
+      return "";
+    }
+  }
+  
+  return ( 
+    <div className="navigation">
+      <ul>
+
+        <li className={`list ${listItemStatus()}`} >
+          <Link to="/products">
+            <span className="icon"><img id="package" src={product} alt="product icon"/></span>
+            <span className="text">PRODUCTS</span> 
+          </Link>
+        </li>
+        
+        <li className={`list ${location.pathname === '/' ? "active" : ""}`} >
+          <Link to="/">
+            <span className="icon"><img id="bee" src={bee} alt="bee icon"/></span>
+            <span className="text">HOME</span> 
+          </Link>
+        </li>
+
+        <li className={`list ${location.pathname === '/blog' ? "active" : ""}`} >
+          <Link to="/blog">
+            <span className="icon"><img id="blog" src={blog} alt="blog icon"/></span>
+            <span className="text">BLOG</span> 
+          </Link>
+        </li>
+        <div className="circle"></div>
+      </ul>
+    </div>
+   );
+}
+ 
+export default Navigation; 
+-->
 
 ## Code Issues & Resolutions
 
-Pending...
+On initial push, I'm having an issue with having only one div on the products component and a div on the blog component scroll.  
+The intent is to have the backgrounds and navigation locked, but to have the contents within them scroll.  As of initial push, they are pushing low and outside of the frame.
