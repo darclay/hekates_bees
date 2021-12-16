@@ -33,6 +33,10 @@
   align-items: center;
   background-color: black;
   height: calc(100vh - 377px);
+  overflow-y: auto;
+  min-height: 80px;
+  max-height: calc(100vh - 377px);
+
 }
 .blogDiv .blogLeftBottomDiv .postCard {
   background-color: white;

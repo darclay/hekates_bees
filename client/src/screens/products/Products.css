@@ -9,6 +9,9 @@
   flex-wrap: wrap;
   justify-content: space-around;
   width: 70%;
+  overflow-y: auto;
+  min-height: 80px;
+  max-height: calc(100vh - 50px);
 }
 .productsDiv .productsBackgroundDiv .productsRightDiv {
   width: 30%;
